@@ -17,20 +17,6 @@ const projects = [
     }
   ];
 
-// 检查用户输入并更改图片
-function checkUserInput() {
-  const userInput = prompt("请输入密码：");
-  
-  if (userInput === "tjr") {
-    // 更改图片为本地images文件夹中的图片
-    projects[0].img = "images/1.jpg";
-    projects[1].img = "images/2.jpg";
-    projects[2].img = "images/3.jpg";
-  } else if (userInput === "111") {
-    // 保持图片不变
-    console.log("保持图片不变");
-  }
-}
 // 渲染作品卡片
 function renderProjects() {
   const container = document.getElementById("projectsContainer");
@@ -73,6 +59,5 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  checkUserInput();
   renderProjects();
 });
