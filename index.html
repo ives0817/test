@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI 设计师作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 无边框浮动导航：左胶囊 · 右圆钮 -->
+  <nav class="navbar" aria-label="主导航">
+    <a href="#home" class="nav-pill">
+      <img
+        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=faces"
+        alt="路飞头像"
+        class="nav-pill__avatar"
+        width="36"
+        height="36"
+        loading="lazy"
+      >
+      <span class="nav-pill__text">路飞，UI 设计师，上海</span>
+    </a>
+    <div class="nav-right">
+      <button id="menuBtn" type="button" class="menu-btn" aria-label="打开或关闭导航菜单" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div id="menuDropdown" class="menu-dropdown" role="menu">
+        <a href="#home">首页</a>
+        <a href="#projects">我的项目</a>
+        <a href="#about">关于我</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 首页内容 -->
+  <main>
+    <section id="home" class="hero">
+      <h1>我专注于打造有温度的产品体验</h1>
+      <p class="tagline">专注于界面设计与用户体验</p>
+      <div class="status-badge">
+        <span class="green-dot"></span> 离职状态
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>我的项目</h2>
+      <div id="projectsContainer" class="projects-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 你的名字 | UI 设计师</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
