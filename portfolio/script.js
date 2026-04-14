@@ -1,13 +1,13 @@
 // Data from React component
 const portfolioImages = [
-  "assets/home/portfolio_image_1.jpg",
-  "assets/home/portfolio_image_2.jpg",
-  "assets/home/portfolio_image_3.jpg",
-  "assets/home/portfolio_image_4.jpg",
-  "assets/home/portfolio_image_5.jpg",
-  "assets/home/portfolio_image_6.jpg",
-  "assets/home/portfolio_image_7.jpg",
-  "assets/home/portfolio_image_8.jpg"
+  "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400",
+  "https://images.unsplash.com/photo-1757310998437-b2e8a7bd2e97?w=400",
+  "https://images.unsplash.com/photo-1752524722694-e0976575a993?w=400",
+  "https://images.unsplash.com/photo-1770012977129-19f856a1f935?w=400",
+  "https://images.unsplash.com/photo-1766503206606-27de0861e8a4?w=400",
+  "https://images.unsplash.com/photo-1771931169282-4ebc82b973b3?w=400",
+  "https://images.unsplash.com/photo-1771930235454-273b6a545deb?w=400",
+  "https://images.unsplash.com/photo-1771931278406-e3deaf47d786?w=400",
 ];
 
 const portfolioCards = [

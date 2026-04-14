@@ -44,7 +44,6 @@ body {
 .personal-info {
   display: flex;
   overflow: hidden;
-  height: 326px;
 }
 
 .personal-content {
@@ -128,24 +127,21 @@ body {
 }
 
 .portrait {
+  width: 240px;
   height: 100%;
-  padding-right: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-right: 20px;
 }
 
 .portrait img {
+  width: 100%;
   height: 100%;
-  width: auto;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: top;
 }
 
 /* Portfolio Grid module */
 .portfolio-grid {
   padding: 16px 24px;
-  height: 326px;
 }
 
 .portfolio-grid h3 {
