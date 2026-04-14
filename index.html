@@ -1,64 +1,391 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI 设计师作品集</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UIDesignerPortfolioScreenCopy </title>
+	<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-  <!-- 无边框浮动导航：左胶囊 · 右圆钮 -->
-  <nav class="navbar" aria-label="主导航">
-    <a href="#home" class="nav-pill">
-      <img
-        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=faces"
-        alt="路飞头像"
-        class="nav-pill__avatar"
-        width="36"
-        height="36"
-        loading="lazy"
-      >
-      <span class="nav-pill__text">路飞，UI 设计师，上海</span>
-    </a>
-    <div class="nav-right">
-      <button id="menuBtn" type="button" class="menu-btn" aria-label="打开或关闭导航菜单" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <div id="menuDropdown" class="menu-dropdown" role="menu">
-        <a href="#home">首页</a>
-        <a href="#projects">我的项目</a>
-        <a href="#about">关于我</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- 首页内容 -->
-  <main>
-    <section id="home" class="hero">
-      <h1>我专注于打造有温度的产品体验</h1>
-      <p class="tagline">专注于界面设计与用户体验</p>
-      <div class="status-badge">
-        <span class="green-dot"></span> 离职状态
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <h2>我的项目</h2>
-      <div id="projectsContainer" class="projects-grid"></div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 你的名字 | UI 设计师</p>
-  </footer>
-  <script src="js/script.js"></script>
+		<div class="flex flex-col bg-white">
+		<div class="self-stretch bg-[#FDFDFD] pb-[377px] px-60 flex justify-center">
+			<div class="flex flex-col w-[1440px] pb-[1px] gap-4">
+				<div class="flex items-center self-stretch gap-4">
+					<div class="flex flex-1 justify-between items-start bg-white pt-[13px] rounded-xl" style="box-shadow: 0px 8.275861740112305px 24px #0000000D">
+						<div class="flex flex-col shrink-0 items-start ml-5">
+							<div class="flex items-center mb-2 ml-3.5 gap-[7px]">
+								<div class="bg-green-500 w-1.5 h-1.5 rounded-[27769136px]">
+								</div>
+								<div class="flex flex-col shrink-0 items-start pb-[1px]">
+									<span class="text-green-600 text-xs" >
+										在职
+									</span>
+								</div>
+							</div>
+							<div class="flex flex-col items-start pb-[1px] mb-[5px] ml-1">
+								<span class="text-gray-900 text-[99px] font-bold" >
+									王佳一
+								</span>
+							</div>
+							<div class="flex flex-col items-start mb-[9px] ml-1">
+								<span class="text-[#B9B9B9] text-sm" >
+									UI/UX 设计师
+								</span>
+							</div>
+							<div class="flex flex-col items-start mb-[35px] mx-1">
+								<span class="text-gray-700 text-[13px] w-[468px]" >
+									专注于创造优雅、高效的数字产品体验。擅长将设计理念转化为高质量的前端代码， 在界面设计、交互体验和技术实现之间建立完美的平衡。
+								</span>
+							</div>
+							<div class="flex items-center gap-2.5">
+								<span class="text-[#FF2365] text-base" >
+									一键浏览
+								</span>
+								<img
+									src="assets/images/home/home_image_1.png" 
+									class="w-4 h-4 object-fill"
+								/>
+							</div>
+						</div>
+						<img
+							src="assets/images/home/home_image_2.png" 
+							class="w-[268px] h-[311px] mr-[66px] rounded-xl object-fill"
+						/>
+					</div>
+					<div class="flex flex-col shrink-0 items-start bg-white py-[19px] px-[25px] gap-3 rounded-xl" style="box-shadow: 0px 8.275861740112305px 24px #0000000D">
+						<div class="flex flex-col items-start pb-[1px]">
+							<span class="text-gray-900 text-xl font-bold" >
+								动效作品
+							</span>
+						</div>
+						<div class="flex items-center gap-[13px]">
+							<div class="flex flex-col shrink-0 items-start pb-[152px] pl-[1px] pr-4 gap-4">
+								<div class="flex flex-col items-start pb-[1px]">
+									<span class="text-gray-900 text-[13px]" >
+										2026
+									</span>
+								</div>
+								<div class="flex flex-col items-start">
+									<span class="text-gray-400 text-[13px]" >
+										2025
+									</span>
+								</div>
+								<div class="flex flex-col items-start">
+									<span class="text-gray-300 text-[13px]" >
+										2024
+									</span>
+								</div>
+							</div>
+							<div class="flex flex-col shrink-0 items-start pb-[1px] gap-[5px]">
+								<div class="flex items-center">
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 pb-0.5 px-[1px] mr-[7px] rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_3.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start p-1.5 gap-[1px]">
+											<div class="flex flex-col items-start pr-[30px]">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 1
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 pb-0.5 mr-1.5 rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_4.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start py-1.5 px-[7px] gap-[1px]">
+											<div class="flex flex-col items-start pr-7">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 2
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 pb-0.5 px-[1px] mr-[7px] rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_5.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start p-1.5 gap-[1px]">
+											<div class="flex flex-col items-start pr-[27px]">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 3
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 pb-0.5 px-[1px] rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_6.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start p-1.5 gap-[1px]">
+											<div class="flex flex-col items-start pr-[27px]">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 4
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flex items-center">
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 p-[1px] mr-[7px] rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_7.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start p-1.5 gap-[1px]">
+											<div class="flex flex-col items-start pr-7">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 5
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 py-[1px] mr-1.5 rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_8.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start py-1.5 px-[7px] gap-[1px]">
+											<div class="flex flex-col items-start pr-[27px]">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 6
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 p-[1px] mr-[7px] rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_9.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start p-1.5 gap-[1px]">
+											<div class="flex flex-col items-start pr-7">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 7
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-gray-50 p-[1px] rounded-md border border-solid border-gray-200">
+										<img
+											src="assets/images/home/home_image_10.png" 
+											class="w-[72px] h-[72px] rounded-md object-fill"
+										/>
+										<div class="flex flex-col items-start p-1.5 gap-[1px]">
+											<div class="flex flex-col items-start pr-[27px]">
+												<span class="text-gray-900 text-[11px] font-bold" >
+													项目 8
+												</span>
+											</div>
+											<div class="flex flex-col items-start pr-[38px]">
+												<span class="text-gray-500 text-[9px]" >
+													2024
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex items-center self-stretch gap-4">
+					<div class="flex flex-1 flex-col items-start bg-white py-[25px] pr-6 gap-4 rounded-xl" style="box-shadow: 0px 8.275861740112305px 24px #0000000D">
+						<div class="flex items-center ml-6">
+							<div class="flex flex-col shrink-0 items-start mr-[535px]">
+								<span class="text-gray-900 text-xl font-bold" >
+									专业领域
+								</span>
+							</div>
+							<span class="text-gray-900 text-xl font-bold" >
+								项目经历
+							</span>
+						</div>
+						<div class="flex items-center self-stretch ml-6 gap-[25px]">
+							<div class="flex flex-1 flex-col gap-[17px]">
+								<div class="flex justify-center items-center self-stretch gap-[17px]">
+									<div class="flex flex-col shrink-0 items-start bg-white py-[17px] pl-[18px] pr-[179px] rounded-lg border border-solid border-gray-200" style="box-shadow: 0px 8.275861740112305px 16px #00000008">
+										<span class="text-neutral-950 text-[28px] mb-2" >
+											📐
+										</span>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-900 text-base font-bold" >
+												界面设计
+											</span>
+										</div>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-500 text-[11px]" >
+												布局、视觉、交互
+											</span>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-white py-[17px] pl-[17px] pr-[241px] rounded-lg border border-solid border-gray-200" style="box-shadow: 0px 8.275861740112305px 16px #00000008">
+										<span class="text-neutral-950 text-[28px] mb-2" >
+											💻
+										</span>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-900 text-base font-bold" >
+												前端开发
+											</span>
+										</div>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-500 text-[11px]" >
+												HTML、Flutter
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="flex justify-center items-center self-stretch gap-[17px]">
+									<div class="flex flex-col shrink-0 items-start bg-white py-[17px] pl-[18px] pr-[139px] rounded-lg border border-solid border-gray-200" style="box-shadow: 0px 8.275861740112305px 16px #00000008">
+										<span class="text-neutral-950 text-[28px] mb-2" >
+											✨
+										</span>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-900 text-base font-bold" >
+												动效设计
+											</span>
+										</div>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-500 text-[11px]" >
+												LOTTIE、RIVE、FRAMER
+											</span>
+										</div>
+									</div>
+									<div class="flex flex-col shrink-0 items-start bg-white py-[17px] pl-[17px] pr-[180px] rounded-lg border border-solid border-gray-200" style="box-shadow: 0px 8.275861740112305px 16px #00000008">
+										<span class="text-neutral-950 text-[28px] mb-2" >
+											🎨
+										</span>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-900 text-base font-bold" >
+												设计系统
+											</span>
+										</div>
+										<div class="flex flex-col items-start">
+											<span class="text-gray-500 text-[11px]" >
+												令牌、组件、规范
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<img
+								src="assets/images/home/home_image_11.png" 
+								class="w-[331px] h-[267px] object-fill"
+							/>
+						</div>
+						<div class="flex items-center self-stretch bg-[#00000000] py-[17px] px-[18px] ml-6 rounded-lg border border-solid border-gray-200">
+							<div class="bg-[#FF2365] w-2 h-2 mr-3 rounded-[27769136px]">
+							</div>
+							<span class="text-gray-700 text-sm mr-11" >
+								手机号：13737255973
+							</span>
+							<span class="text-gray-700 text-sm mr-11" >
+								邮箱：m13737255973@163.com
+							</span>
+							<span class="text-gray-700 text-sm" >
+								微信：15506772412
+							</span>
+							<div class="flex-1 self-stretch">
+							</div>
+							<div class="flex flex-col shrink-0 items-start">
+								<span class="text-gray-900 text-xl font-bold" >
+									2年经验
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="flex flex-col shrink-0 items-start bg-white p-[25px] rounded-xl" style="box-shadow: 0px 8.275861740112305px 24px #0000000D">
+						<div class="flex flex-col items-start mb-[18px]">
+							<span class="text-gray-900 text-xl font-bold" >
+								最近干什么？
+							</span>
+						</div>
+						<img
+							src="assets/images/home/home_image_12.png" 
+							class="w-[377px] h-[186px] mb-[11px] rounded-xl object-fill"
+						/>
+						<div class="flex flex-col items-start mb-[53px] gap-2.5">
+							<div class="flex flex-col items-start pr-[279px]">
+								<span class="text-gray-900 text-base font-bold" >
+									设计系统重构
+								</span>
+							</div>
+							<div class="flex flex-col items-start">
+								<span class="text-gray-500 text-sm w-[375px]" >
+									正在重构设计系统的组件库，优化响应式布局和暗色模式支持，提升整体用户体验。
+								</span>
+							</div>
+						</div>
+						<div class="flex items-center gap-[17px]">
+							<div class="flex shrink-0 items-center gap-[7px]">
+								<div class="flex flex-col shrink-0 items-start">
+									<span class="text-gray-500 text-xs" >
+										进度
+									</span>
+								</div>
+								<div class="shrink-0 items-start bg-[#E3E3E3] pr-[19px] rounded-[27769136px]">
+									<div class="bg-[#FF2365] w-[43px] h-1">
+									</div>
+								</div>
+								<div class="flex flex-col shrink-0 items-start">
+									<span class="text-[#FF2365] text-xs" >
+										70%
+									</span>
+								</div>
+							</div>
+							<div class="flex flex-col shrink-0 items-start">
+								<span class="text-gray-500 text-xs" >
+									预计完成：5天
+								</span>
+							</div>
+							<div class="w-[125px] h-[18px]">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

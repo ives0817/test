@@ -1,63 +1,92 @@
-// 作品数据（你只需要改这里！）
-const projects = [
-    {
-      title: "UI&UX设计",
-      desc: "从用户旅程出发，优化界面交互与视觉层次，打造流畅高效的产品体验",
-      img: "https://picsum.photos/seed/figma-course/600/400"
-    },
-    {
-      title: "运营设计",
-      desc: "围绕业务目标设计营销物料与活动页面，强化品牌感知并提升用户转化",
-      img: "https://picsum.photos/seed/b-end-design/600/400"
-    },
-    {
-      title: "动效设计",
-      desc: "使用 After Effects 制作界面交互动效，提升产品视觉吸引力与用户体验",
-      img: "https://picsum.photos/seed/ae-animation/600/400"
-    }
-  ];
+// 导航栏交互
+function initNavbar() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
 
-// 渲染作品卡片
-function renderProjects() {
-  const container = document.getElementById("projectsContainer");
-  container.innerHTML = "";
+    // 切换菜单
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
 
-  projects.forEach(project => {
-    const card = document.createElement("div");
-    card.className = "project-card";
-    card.innerHTML = `
-      <div class="project-card__thumb">
-        <img src="${project.img}" alt="${project.title}">
-      </div>
-      <div class="project-info">
-        <h3>${project.title}</h3>
-        <p>${project.desc}</p>
-      </div>
-    `;
-    container.appendChild(card);
-  });
+    // 点击导航项时关闭菜单
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            
+            // 更新活动状态
+            navItems.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
 }
 
-// 汉堡菜单交互
-const menuBtn = document.getElementById("menuBtn");
-const menuDropdown = document.getElementById("menuDropdown");
+// 遍历HTML并处理内容
+function traverseHTML() {
+    // 获取所有图片元素
+    const images = document.querySelectorAll('img');
+    
+    // 添加图片错误处理
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = 'assets/images/image_1.png'; // 备用图片
+        });
+    });
 
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("active");
-  menuDropdown.classList.toggle("show");
-  const open = menuBtn.classList.contains("active");
-  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-});
+    // 获取所有链接元素
+    const links = document.querySelectorAll('a');
+    
+    // 为链接添加点击效果
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // 阻止默认行为
+            e.preventDefault();
+            
+            // 获取目标ID
+            const targetId = this.getAttribute('href').substring(1);
+            
+            // 如果是内部链接，平滑滚动到目标位置
+            if (targetId) {
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
 
-// 点击页面其他地方关闭菜单
-document.addEventListener("click", (e) => {
-  if (!menuBtn.contains(e.target) && !menuDropdown.contains(e.target)) {
-    menuBtn.classList.remove("active");
-    menuDropdown.classList.remove("show");
-    menuBtn.setAttribute("aria-expanded", "false");
-  }
-});
+    // 优化页面加载性能
+    optimizePerformance();
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-  renderProjects();
+// 优化页面性能
+function optimizePerformance() {
+    // 减少重排重绘
+    const style = document.createElement('style');
+    style.textContent = `
+        img {
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// 加载导航栏组件
+function loadNavbar() {
+    fetch('components/nav-header.html')
+        .then(response => response.text())
+        .then(data => {
+            const headerContainer = document.createElement('div');
+            headerContainer.innerHTML = data;
+            document.body.insertBefore(headerContainer, document.body.firstChild);
+            initNavbar();
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+}
+
+// 页面加载完成后执行
+document.addEventListener('DOMContentLoaded', function() {
+    loadNavbar();
+    setTimeout(traverseHTML, 100); // 延迟执行，确保DOM已经完全加载
 });
