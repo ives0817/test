@@ -12,10 +12,11 @@ body {
 
 /* Main container */
 .container {
-  width: 1440px;
-  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
   background-color: #FDFDFD;
-  padding: 24px;
+  padding: clamp(16px, 2vw, 24px);
   margin: 0 auto;
   position: relative;
 }
@@ -27,6 +28,142 @@ body {
   grid-template-rows: auto auto;
   gap: 16px;
   margin-top: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 700px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .main-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .personal-info {
+    height: auto;
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .portfolio-grid {
+    height: auto;
+    min-height: 326px;
+  }
+  
+  .personal-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .personal-info h1 {
+    font-size: 72px;
+    margin: 0 0 8px;
+  }
+  
+  .personal-info p {
+    margin: 0;
+  }
+  
+  .portrait {
+    display: none !important;
+  }
+  
+  .browse-button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 20px;
+  }
+  
+  .fields-content {
+    flex-direction: column;
+  }
+  
+  .project-image {
+    width: 100%;
+    min-width: auto;
+    margin: 0;
+  }
+  
+  .fields-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+  
+  .personal-info h1 {
+    font-size: 48px;
+  }
+  
+  .personal-info h2 {
+    font-size: 12px;
+  }
+  
+  .personal-info p {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  
+  .portfolio-grid h3,
+  .professional-fields h3,
+  .recent-activity h3 {
+    font-size: 18px;
+  }
+  
+  .fields-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .activity-image {
+    height: 140px;
+  }
+  
+  .status-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-info h1 {
+    font-size: 36px;
+  }
+  
+  .portfolio-images {
+    grid-template-columns: 1fr;
+  }
+  
+  .activity-content h4 {
+    font-size: 14px;
+  }
+  
+  .activity-content p {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .info-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
 }
 
 /* Common module styles */
@@ -45,11 +182,12 @@ body {
   display: flex;
   overflow: hidden;
   height: 326px;
+  position: relative;
 }
 
 .personal-content {
   flex: 1;
-  padding: 20px 24px;
+  padding: clamp(16px, 2vw, 24px);
 }
 
 .status-badge {
@@ -73,7 +211,7 @@ body {
 }
 
 .personal-info h1 {
-  font-size: 96px;
+  font-size: clamp(48px, 8vw, 96px);
   font-weight: bold;
   color: #111827;
   line-height: 1.2;
@@ -129,15 +267,20 @@ body {
 
 .portrait {
   height: 100%;
-  padding-right: 64px;
+  width: 232px;
+  min-width: 232px;
+  max-width: 40%;
+  margin-right: clamp(32px, 4vw, 64px);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .portrait img {
   height: 100%;
-  width: auto;
+  width: 100%;
   object-fit: cover;
   object-position: center bottom;
 }
@@ -223,13 +366,23 @@ body {
   flex-direction: column;
 }
 
+.fields-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.fields-header h3:last-child {
+  margin-left: auto;
+  margin-right: 24px;
+}
+
 .professional-fields h3 {
   font-size: 20px;
   font-weight: bold;
   color: #111827;
   line-height: 1.4;
-  margin-bottom: 16px;
-  margin-top: 0;
+  margin: 0;
 }
 
 .fields-content {
@@ -279,12 +432,33 @@ body {
 }
 
 .project-image {
-  width: 320px;
+  flex: 1;
+  min-width: 300px;
   aspect-ratio: 4/3;
   border-radius: 8px;
   overflow: hidden;
   background-color: #FDFDFD;
   border: 1px solid #E5E7EB;
+}
+
+/* 桌面端约束最大宽度 */
+@media (min-width: 1201px) {
+  .project-image {
+    max-width: 330px;
+  }
+}
+
+/* 大于1440px时，图片不缩放 */
+@media (min-width: 1441px) {
+  .portrait {
+    width: 270px;
+    max-width: 270px;
+    margin-right: 64px;
+  }
+  
+  .portrait img {
+    object-fit: contain;
+  }
 }
 
 .project-image img {
@@ -381,7 +555,7 @@ body {
 
 .status-bar {
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: 24px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -402,7 +576,7 @@ body {
 .progress-bar {
   width: 60px;
   height: 4px;
-  background-color: #F9FAFB;
+  background-color: #e2e2e2;
   border-radius: 2px;
   overflow: hidden;
 }
